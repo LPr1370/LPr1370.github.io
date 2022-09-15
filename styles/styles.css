@@ -23,3 +23,9 @@ nav a:active{color:grey}
 h2{
     text-align:center;
 }
+footer{
+    background-color: teal;
+    padding: 15px;
+    width:100%;
+    margin:-7px;
+}
