@@ -53,8 +53,7 @@ body
 .content
 {
     background-color: rgba(161, 220, 237, 0.3);
-    height:90vh;
-    margin-bottom:40px
+    height:100vh;
 }
 
 ul, p, ol
@@ -88,4 +87,8 @@ footer
 .poem
 {
     float:right;
+}
+.introduction-list
+{
+    margin-bottom:90px
 }
