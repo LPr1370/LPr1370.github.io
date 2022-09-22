@@ -2,7 +2,7 @@ h1
  {
     font-family: papyrus;
     text-align: center; 
-    background-image: linear-gradient(60deg, blue, rgb(3, 229, 229) 50%); 
+    background-image: linear-gradient(3deg, blue, rgb(3, 229, 229) 85%); 
     background-size: 100%; 
     -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text;
