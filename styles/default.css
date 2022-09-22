@@ -53,10 +53,39 @@ body
 .content
 {
     background-color: rgba(161, 220, 237, 0.3);
-   
+    height:90vh;
+    margin-bottom:40px
 }
+
 ul, p, ol
 {
     margin-left: 30px;
     margin-right: 30px
+}
+.classmate-links, .poem
+{
+    padding:20px;
+    line-height: 2;
+    margin-left:100px;
+    list-style-type: none;
+    text-align: left;
+    float:left;
+
+}
+footer
+{
+    position:fixed;
+    bottom:0;
+    left:0
+}
+.classmate-links a:visited{color:rgb(6, 126, 126)}
+.classmate-links a:hover{color:azure}
+.classmate-links a{text-decoration:none; color:rgb(6, 126, 126); padding-left: 7px;}
+.classmate-links .poem
+{
+    display:inline-block;
+}
+.poem
+{
+    float:right;
 }
