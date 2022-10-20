@@ -58,7 +58,7 @@ body {
   background: #5c7457;
 }
 
-.content {
+main{
   background-color: #b8e1ff;
   height: 100;
   color: #23193d;
@@ -156,4 +156,63 @@ dl{
 h3{
   text-align:center;
   font-size:larger
+}
+.colors{
+  background-color: lightgray;
+  padding-right: 37px;
+  padding-top: 2px;
+  text-align: center;
+  list-style-type: none;
+  width: fit-content;
+}
+.colorTable{
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;
+  padding: 5px
+}
+th, td, tr{
+  border: 1px solid black;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+.brownieLinks{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(25, 94, 94);
+  padding-top: 10px;
+}
+.brownieLinks:visited {
+  color: rgb(25, 94, 94);
+}
+.brownieLinks:hover {
+  color: azure;
+}
+.brownieList{
+  padding-right: 37px;
+  padding-top: 2px;
+  list-style-type: none;
+  width: fit-content;
+ }
+ .brownieList li{
+  padding-bottom:10px;
+ }
+ .brownieList a{
+  color:rgb(128, 56, 56);
+  text-decoration:none;
+  font-weight: bold;
+ }
+.brownieList a:visited{
+color: rgb(128, 56, 56);
+text-decoration: none;
+}
+.contentBrownie h2{
+  text-align: left;
+  margin: 50px;
+  color: rgb(128, 56, 56);
 }
