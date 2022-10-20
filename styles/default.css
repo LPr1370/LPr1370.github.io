@@ -1,5 +1,5 @@
 h1 {
-  font-family: papyrus;
+  font-family:'Lucida Handwriting', 'Brush Script MT', serif;
   text-align: center;
   background-image: linear-gradient(
     0deg,
@@ -47,8 +47,12 @@ h2 {
 footer,
 header {
   background-color: #f4f1bb;
-  padding: 15px;
-  width: 100%;
+  padding-top: 15px;
+  width: 100%
+}
+header{
+  margin-top: -8px;
+  padding-bottom: 10px;
 }
 body {
   width: 80%;
@@ -60,9 +64,10 @@ body {
 
 main{
   background-color: #b8e1ff;
-  height: 100;
   color: #23193d;
-  padding-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 150px;
 }
 
 ul,
@@ -94,7 +99,7 @@ footer a {
   display: inline-block;
 }
 footer a {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .classmate-links a:visited {
@@ -121,12 +126,7 @@ footer a {
 .introduction-list {
   margin-bottom: 90px;
 }
-header {
-  margin-top: -8px;
-}
-main {
-  margin-left: 4vh;
-}
+
 .contract-introduction-link:visited,
 .contract-introduction-link {
   color: #79423c;
