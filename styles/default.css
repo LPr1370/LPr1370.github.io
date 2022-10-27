@@ -216,3 +216,13 @@ text-decoration: none;
   margin: 50px;
   color: rgb(128, 56, 56);
 }
+.jsActivity1-title{
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+  text-align: center;
+}
+.jsActivity1-table{
+  text-align: center;
+  align-self: center;
+  margin: auto;
+}
