@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas Prieto's Lame Panda | CP-CO-01 | Javascript Activity 1</title>
+    <link rel="stylesheet" href="../styles/default.css" />
+  </head>
+  <body>
+    <div data-include="../components/header.html"></div>
+    <script src="../scripts/HTMLInclude-master/docs/js/HTMLInclude.js"></script>
+    <main class="javascript-activities">
+        <br/>
+        <h3>Divider</h3>
+        <label for="consta">Constant a =</label>
+        <input type="text" id="consta">
+        <br/>
+        <label for="constb">Constant b =</label>
+        <input type="text" id="constb">
+        <br/>
+        <button onclick="dividerFunction()">Divide a by b</button>
+        <p id="divider-result">Result: </p>
+        <script type="text/javascript">
+            function dividerFunction(){
+            let a = document.getElementById("consta").value;
+            let b = document.getElementById("constb").value;
+            let result = null;
+            if(b != 0) {
+            result = a / b;
+            document.getElementById("divider-result").innerText="Result: " + result;
+            }}
+        </script>
+        <br/>
+        <h3>Clothing Helper</h3>
+        <label for="temperature">What is the temperature?</label>
+        <input type="text" id="temperature">
+        <button onclick="temperatureFunction()">What should I wear?</button>
+        <p id="temperature-result"></p>
+        <script type="text/javascript">
+            function temperatureFunction(){
+            let temperature = document.getElementById("temperature").value;
+            if(temperature >= 80){
+                document.getElementById("temperature-result").innerText="You should wear shorts";
+            }else{
+                if(temperature <= 50){
+                    document.getElementById("temperature-result").innerText="You should wear a coat";
+                
+            }else{
+                document.getElementById("temperature-result").innerText="You should wear some clothes";
+            }
+            }}
+        </script>
+        <br/>
+        <h3>Switch Statement Foods</h3>
+        <button onclick="foodDeciderFunction()">What should I eat?</button>
+        <p id="food-result">I should eat...</p>
+        <script type="text/javascript">
+            function foodDeciderFunction(){
+                let dieRoll = 0
+                dieRoll = Math.round(Math.random()*4);
+            switch(dieRoll){
+                case 1: document.getElementById("food-result").innerText= "I should eat beans"; break;
+                case 2: document.getElementById("food-result").innerText= "I should eat rice"; break;
+                case 3: document.getElementById("food-result").innerText= "I should eat a yams"; break;
+                case 4: document.getElementById("food-result").innerText= "I should eat some candy"; break;
+                default: document.getElementById("food-result").innerText= "I should eat some cake";
+            }
+            }
+        </script>
+        <br/>
+        <h3>Gas It Up</h3>
+        <label for="gasCurrent">How much gas is in the car? </label>
+        <input type="text" id="gasCurrent">
+        <br/>
+        <label for="gasMax">How much gas can the car hold? </label>
+        <input type="text" id="gasMax">
+        <br/>
+        <button onclick="gasFunction()">Fill the car</button>
+        <p id="gas-result">Result: </p>
+        <script type="text/javascript">
+            function gasFunction(){
+                let gasCurrent = parseInt(document.getElementById("gasCurrent").value);
+                let gasMax = parseInt(document.getElementById("gasMax").value);
+                
+                while(gasCurrent < gasMax){
+                    console.log(gasCurrent);
+                    gasCurrent++;
+                }
+
+                if(gasCurrent == gasMax){
+                    document.getElementById("gas-result").innerText= "The car has been filled";
+                }else{
+                    if(gasCurrent < gasMax){
+                        document.getElementById("gas-result").innerText= "The car has been under-filled"; 
+                    }else{
+                        if(gasCurrent > gasMax){
+                            document.getElementById("gas-result").innerText= "The car has been over-filled";
+                        }
+
+                }
+            }
+        }
+        </script>
+    </main>
+    <div data-include="../components/footer.html"></div>
+    <script src="../scripts/HTMLInclude-master/docs/js/HTMLInclude.js"></script>
+  </body>
+</html>
