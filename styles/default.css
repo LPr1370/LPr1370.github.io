@@ -226,3 +226,11 @@ text-decoration: none;
   align-self: center;
   margin: auto;
 }
+.assignments{
+  font-family: 'Courier New', Courier, monospace;
+}
+.assignments-main p{
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
