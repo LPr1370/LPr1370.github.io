@@ -9,54 +9,94 @@
   <body>
     <div data-include="../components/header.html"></div>
     <script src="../scripts/HTMLInclude-master/docs/js/HTMLInclude.js"></script>
+    <script type="text/javascript">
+        function informationUnhiderFunction(){
+            let consoleInput = prompt("Enter the customer ID: ");
+            consoleInput = parseInt(consoleInput);
+            switch (consoleInput){
+                case 1: 
+                    document.getElementById("001-first-name").removeAttribute("hidden");
+                    document.getElementById("001-last-name").removeAttribute("hidden"); 
+                    document.getElementById("last-name-header").removeAttribute("hidden");
+                    document.getElementById("first-name-header").removeAttribute("hidden");  
+                break;
+                case 2: 
+                    document.getElementById("002-first-name").removeAttribute("hidden");
+                    document.getElementById("002-last-name").removeAttribute("hidden"); 
+                    document.getElementById("last-name-header").removeAttribute("hidden");
+                    document.getElementById("first-name-header").removeAttribute("hidden");  
+                break; 
+                case 3: 
+                    document.getElementById("003-first-name").removeAttribute("hidden");
+                    document.getElementById("003-last-name").removeAttribute("hidden"); 
+                    document.getElementById("last-name-header").removeAttribute("hidden");
+                    document.getElementById("first-name-header").removeAttribute("hidden");  
+                break;
+                case 4:                   
+                    document.getElementById("004-first-name").removeAttribute("hidden");
+                    document.getElementById("004-last-name").removeAttribute("hidden"); 
+                    document.getElementById("last-name-header").removeAttribute("hidden");
+                    document.getElementById("first-name-header").removeAttribute("hidden");  
+                break;
+                case 5:
+                    document.getElementById("005-first-name").removeAttribute("hidden");
+                    document.getElementById("005-last-name").removeAttribute("hidden"); 
+                    document.getElementById("last-name-header").removeAttribute("hidden");
+                    document.getElementById("first-name-header").removeAttribute("hidden");  
+                break;
+                default: console.log("That is not a valid user ID");
+            }
+        }
+    </script>
     <main>
         <br/>
-        <h2 class="jsActivity1-title">The Company Name</h2>
+        <h2 class="jsActivity1-title" id="test">The Company Name</h2>
         <br/>
         <table class="jsActivity1-table">
             <tr>
                 <th>customer_id</th>
                 <th>Last Purchase Quantity</th>
                 <th>Last Purchase Amount</th>
-                <th class="private-info">First Name</th>
-                <th class="private-info">Last Name</th>
+                <th id="first-name-header" hidden>First Name</th>
+                <th id="last-name-header" hidden>Last Name</th>
             </tr>
             <tr>
                 <td>001</td>
                 <td>5</td>
                 <td>$50</td>
-                <td>Jacob</td>
-                <td>Smith</td>
+                <td id="001-first-name" hidden>Jacob</td>
+                <td id="001-last-name" hidden>Smith</td>
             </tr>
             <tr>
                 <td>002</td>
                 <td>10</td>
                 <td>$100</td>
-                <td>Iris</td>
-                <td>Johnson</td>
+                <td id="002-first-name" hidden>Iris</td>
+                <td id="002-last-name" hidden>Johnson</td>
             </tr>
             <tr>
                 <td>003</td>
                 <td>5</td>
                 <td>$50</td>
-                <td>Javier</td>
-                <td>Perez</td>
+                <td id="003-first-name" hidden>Javier</td>
+                <td id="003-last-name" hidden>Perez</td>
             </tr>
             <tr>
                 <td>004</td>
                 <td>20</td>
                 <td>$200</td>
-                <td>Henry</td>
-                <td>Thomas</td>
+                <td id="004-first-name"hidden>Henry</td>
+                <td id="004-last-name" hidden>Thomas</td>
             </tr>
             <tr>
                 <td>005</td>
                 <td>10</td>
                 <td>$100</td>
-                <td>Janice</td>
-                <td>Smith</td>
+                <td id="005-first-name" hidden>Janice</td>
+                <td id="005-last-name" hidden>Smith</td>
             </tr>
         </table>
+        <button onclick="informationUnhiderFunction()">Additional Information</button>
     </main>
     <div data-include="../components/footer.html"></div>
     <script src="../scripts/HTMLInclude-master/docs/js/HTMLInclude.js"></script>
