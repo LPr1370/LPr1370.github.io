@@ -89,10 +89,11 @@ h3 {
 }
 footer {
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   right: 0;
   text-align: center;
+  padding-bottom: 15px;
 }
 footer nav,
 footer a {
