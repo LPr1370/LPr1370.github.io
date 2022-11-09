@@ -227,13 +227,28 @@ text-decoration: none;
   align-self: center;
   margin: auto;
 }
-.assignments{
+h2, h3{
   font-family: 'Courier New', Courier, monospace;
+  color: darkslateblue
 }
 .assignments-main p{
   margin: auto;
   text-align: center;
   padding: 5px;
+}
+.assignments-main a{
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  color: #5c7457;
+  font-weight: bold;
+}
+.assignments-main a:visited{
+  color: #5c7457;
+  font-weight: bold;
+}
+.assignments-main a:hover{
+  color: white;
+  text-decoration: overline underline;
 }
 .javascript-activities{
   text-align: center;
