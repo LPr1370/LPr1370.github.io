@@ -1,6 +1,7 @@
 for (const form of document.querySelectorAll("form")) {
     form.addEventListener("submit", function checkUserInputsByClass(event) {
-      let errorsArray = ["test"];
+      event.preventDefault()
+      let errorsArray = [];
       [...form.elements].forEach((input) => {
         if (input.classList.contains("required")) {
           if (input.value == "" || input.value.trim().length == 0) {errorsArray.push("Required fields must have a value that is not empty or whitespace.");}
@@ -29,17 +30,27 @@ for (const form of document.querySelectorAll("form")) {
         }
 
       })
-      if (errors.length > 0) {
+      if (errorsArray.length > 0) {
         event.preventDefault()
-        var listOfErrors = document.createElement("ul")
-        listOfErrors.style = "color:red", "font-weight: bold"
-      } else {
-        form.submit();
+        let errorList = form.parentNode.querySelector(".errors");
+        let unorderedList = document.createElement("ul");
+        
+        for (const error of errorsArray) {
+          const listItem = document.createElement("li");
+          const messageText = document.createTextNode(error);
+      
+          listItem.appendChild(messageText);
+          unorderedList.appendChild(listItem);
+          listItem.style = "color: red";
+        }
+        errorList.appendChild(unorderedList);
+
       }
     });
-  }
+  } //end for forms
+
   const requiredSizeValidationFunction = (input) => {
-    return input.value.length === parseInt(input.getAttribute("minlength"));
+    return input.value.length == parseInt(input.getAttribute("minlength"));
   };
   const numberValidatorFunction = (input) => {
     const regEx = /^\d+$/;
