@@ -18,8 +18,16 @@ public class LogicExercise {
    * the total sales amount.
    */
   public BigDecimal getDiscount(BigDecimal unitPrice, int unitAmount) {
-
-    return new BigDecimal("-999");
+      BigDecimal discount = new BigDecimal("0.00");
+      if (unitAmount < 50){
+        return unitPrice.multiply(BigDecimal.valueOf(unitAmount));
+      } else if (unitAmount < 99) {
+        discount = BigDecimal.valueOf(0.9);
+        return discount.multiply(unitPrice.multiply(BigDecimal.valueOf(unitAmount)));
+      } else {
+        discount = BigDecimal.valueOf(0.85);
+        return discount.multiply(unitPrice.multiply(BigDecimal.valueOf(unitAmount)));
+      }
   }
 
   /**
@@ -29,8 +37,17 @@ public class LogicExercise {
    * 'D'; if the score is below 60, return 'F'.
    */
   public char getGrade(int score) {
-
-    return ' ';
+    if(score>=90){
+      return 'A';
+    } else if(score>=80) {
+      return 'B';
+    }else if(score>=70){
+      return 'C';
+    }else if(score>=60){
+      return 'D';
+    }else {
+      return 'F';
+    }
   }
 
   /**
@@ -50,8 +67,12 @@ public class LogicExercise {
    * each element in a.
    */
   public double[] powerArray(double[] a) {
-
-    return null;
+    for(int counter = 0; counter < a.length; counter++){
+      double powered = a[counter];
+      powered = powered * powered;
+      a[counter] = powered;
+    }
+    return a;
   }
 
 
@@ -60,7 +81,15 @@ public class LogicExercise {
    * value.
    */
   public int indexOfMax(int[] a) {
-    return -1;
+    int greatest = 0;
+    int index = 0;
+    for (int counter = 0; counter < a.length; counter++){
+      if(a[counter] > greatest){
+        greatest = a[counter];
+        index = counter;
+      }
+    }
+    return index;
   }
 
 
@@ -69,9 +98,12 @@ public class LogicExercise {
    * array are divisible by the given int, i.
    */
   public boolean isDivisibleBy(ArrayList<Integer> a, int i) {
-
-    return false;
-
+    for (int counter = 0; counter < a.size(); counter++){
+      if(a.get(counter)%i != 0){
+        return false;
+      }
+    }
+    return true;
   }
 
   /**
